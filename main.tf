@@ -126,3 +126,10 @@ module "ec2_instances" {
     environment = "development"
   }
 }
+
+module "s3-bucket-kalyani" {
+  source  = "app.terraform.io/policy-as-code-training/s3-bucket-kalyani/aws"
+  version = "1.0.0"
+  bucket_name = "kalyani-06-05-2026"
+  # insert required variables here
+}
